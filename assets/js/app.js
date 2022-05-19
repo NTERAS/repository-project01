@@ -1,10 +1,12 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.menuprincipal')
+    const nav = document.querySelector('.menuprincipal');
+    const nav2 = document.querySelector('.navobject');
 
     burger.addEventListener('click', ()=>{
         //toggle nav
         nav.classList.toggle('nav-active');
+        nav2.classList.toggle('nav-active');
 
         //burger animation
         burger.classList.toggle('toggle');
