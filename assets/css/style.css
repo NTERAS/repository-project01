@@ -8,6 +8,7 @@
     font-family: myriad;
     src: url('../fonts/MYRIADPRO-REGULAR.OTF');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 .header {
@@ -22,13 +23,7 @@
     height: 110px;
     position: sticky;
     top: 0px;
-    
-    
-}
-.sticky-hr{
-    /* position: fixed; left: 1%; width: 98%; */
-    /* position: sticky; */
-    /* top: 100px; */
+    border-bottom: solid 1px;
 }
 
 nav{
@@ -78,9 +73,6 @@ h1{
     font-family: myriad;
 }
 
-.fbk:hover{
-    
-}
 
 .scrollbutton{
     background-color: transparent;
@@ -143,16 +135,18 @@ h1{
 #feature{
     background-color: rgb(210, 18, 66);
     color:white;
-    height: 739px;
+    min-height: 739px;
     margin: 0;
 }
 
 .icons{
     width: 35px;
+    margin: 50px;
 }
 
 .ftext{
     width: 264px;
+    margin: 20px;
 }
 
 .feature{
@@ -161,29 +155,10 @@ h1{
     left: 12.5%;
     text-align: center;    
     display: flex;
-    flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 75%;
-    
-}
-
-#icons{
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
-}
-
-#title{
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
-}
-
-#text{
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
 }
 
 .ftittle{
@@ -213,7 +188,14 @@ h2{
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 6%;
+    top: 50px;
+}
+
+.cardfeature{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 #news{
@@ -331,8 +313,8 @@ h2{
     color: white;
     display: flex;
     align-items: center ;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .logofooter{
@@ -343,11 +325,15 @@ h2{
 .footer1{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 45%;
 }
 
 .footer2{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 45%;
 }
 
 .textfooter{
@@ -367,6 +353,7 @@ h2{
     color:white;
     padding-left: 5%;
     padding-right: 5%;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -421,6 +408,14 @@ h2{
         padding-left: 11px;
         font-family: myriad;
     }
+
+    .footgrey{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .textfootgrey{
+        padding: 10px;
+    }
 }
 @media screen and (max-width:500px){
     .hero h1{
@@ -436,4 +431,46 @@ h2{
         padding-left: 34px;
     }
     
+}
+
+@media screen and (max-width:1638px){
+    .feature{
+        min-height: 650px;
+        top: 50px;
+        width: 80%;
+        left:10%
+    }
+    .icons{
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width:827px){
+    .feature{
+        min-height: 1100px;
+        top: 30px;
+    }
+}
+
+@media screen and (max-width:1240px){
+    .footerred{
+        flex-direction: column;
+    }
+    .footer1{
+        width: 70%;
+    }
+    .footer2{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:740px){
+    .footer1{
+        margin: 15px;
+        width: 90%;
+    }
+    .footer2{
+        margin: 15px;
+        width: 90%;
+    }
 }
