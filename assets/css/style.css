@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#feature{
+    background-color: rgb(210, 18, 66);
+    color:white;
+    height: 739px;
+    margin: 0;
+}
+
+.icons{
+    width: 35px;
+}
+
+.ftext{
+    width: 264px;
+}
+
+.feature{
+    position: relative;
+    top: 200px;
+    left: 12.5%;
+    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 75%;
+    
+}
+
+#icons{
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+}
+
+#title{
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+}
+
+#text{
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+}
+
+.ftittle{
+    width: 264px;
+}
+
+.wicon{
+    width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 698px;
+    top: 100px;
+}
+
+h2{
+    font-size: 38px;
+    text-align: center;
+}
+
+.slogan{
+    background-image: url('../img/W.png');
+    background-repeat: no-repeat;
+    height: 210px;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 6%;
+}
+
+#news{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news{
+    max-width:auto;
+    width: 50%;
+    height: auto;
+}
+
+.news1{
+    width: 50%;
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+.news2{
+    background-color: rgb(243, 243, 243);
+    width: 50%;
+}
+
+.titlenews{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.date{
+    font-size: 13px;
+    margin-bottom: 10px;
+
+}
+
+.tnew{
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+.greyblock{
+    width: 50%;
+    height: 50%;
+    margin-top: 15%;
+    margin-left: 30%;
+}
+
+.whiteblock{
+    width: 50%;
+    height: 50%;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("/assets/font/Gotham\ Medium.otf") format("opentype");
+}
+
+.logoblog{
+    height: 176px;
+    background-image: url('../img/B.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 6%;
+    margin-bottom: 120px;
+}
+
+.sloganblog{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.btitle{
+    color:rgb(210, 18, 66);
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.btext{
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 22px;
+    margin-bottom: 80px;
+}
+
+.blogs{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.imgblog{
+    height: 300px;
+    width: 300px;
+}
+
+.footerred{
+    background-color: rgb(210, 18, 66);
+    min-height: 310px;
+    color: white;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.logofooter{
+    height: 70px;
+    margin: 20px;
+}
+
+.footer1{
+    display: flex;
+    align-items: center;
+}
+
+.footer2{
+    display: flex;
+    align-items: center;
+}
+
+.textfooter{
+    width: 70vh;
+    margin-left: 20px;
+}
+
+.footgrey{
+    min-height: 130px;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textfootgrey{
+    color:white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
