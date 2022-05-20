@@ -5,11 +5,18 @@
 }
 
 @font-face {
-    font-family: myriad;
-    src: url('../fonts/MYRIADPRO-REGULAR.OTF');
+    font-family: "myriad";
+    src: url('/assets/fonts/MYRIADPRO-REGULAR.OTF') format("opentype");  
 }
+
+@font-face {
+    font-family: "Gotham";
+    src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .header {
     background-image: url('../img/header-bground-img.png');
@@ -24,6 +31,7 @@
     position: sticky;
     top: 0px;
     border-bottom: solid 1px;
+    font-family: 'myriad';
 }
 
 nav{
@@ -39,7 +47,7 @@ nav{
 .menuprincipal{
     display: flex;
     justify-content: space-around;
-    font-family: myriad;
+    font-family: 'myriad';
     
 }
 .menuprincipal li{
@@ -59,7 +67,9 @@ a{
 h1{
     color: azure;
     font-size: 153px;
+    font-weight: 600;
     text-align: center;
+    font-family: 'Gotham';
 }
 .navobject{
     /* vertical-align: baseline; */
@@ -98,6 +108,8 @@ h1{
 
 .text-scroll{
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 }
 
 .sub-hero {
@@ -137,6 +149,7 @@ h1{
     color:white;
     min-height: 739px;
     margin: 0;
+    font-family: 'Gotham';
 }
 
 .icons{
@@ -248,11 +261,6 @@ h2{
     height: 50%;
     margin-top: 15%;
     margin-left: 10%;
-}
-
-@font-face {
-    font-family: "Gotham";
-    src: url("/assets/font/Gotham\ Medium.otf") format("opentype");
 }
 
 .logoblog{
@@ -382,10 +390,6 @@ h2{
         transition: transform 0.5s ease-in;
         background-color: rgb(0, 0, 0);
     }
-    .menuprincipal li{
-        /* opacity: 0; */
-    }
-
     .burger{
         display: block;
         position: absolute;
