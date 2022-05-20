@@ -42,4 +42,17 @@ function lin1() {
 }
 function lin2() {
     document.getElementById("lin").src = "assets/img/linkdin.png";
-  }
+}
+
+var myNav = document.getElementById('navi');
+
+window.onscroll = () => { 
+   
+   if (window.scrollY > 200) {
+        document.getElementById('navi').classList.add('navOnScroll')
+   }else{
+        if (document.getElementById('navi').classList.contains('navOnScroll')) {
+            document.getElementById('navi').classList.remove('navOnScroll')
+        }
+   }
+}

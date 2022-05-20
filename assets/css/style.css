@@ -8,6 +8,7 @@
     font-family: myriad;
     src: url('../fonts/MYRIADPRO-REGULAR.OTF');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
 	scroll-behavior: smooth;
@@ -17,6 +18,8 @@ html {
 .header {
     background-image: url('../img/header-bground-img.png');
     /* background-color: rgb(3, 15, 15); */
+    margin-top: -110px;
+    height: 929px;
 }
 
 .navbar{
@@ -26,6 +29,7 @@ html {
     height: 110px;
     position: sticky;
     top: 0px;
+    border-bottom: solid 1px;
 }
 
 
@@ -61,12 +65,18 @@ h1{
     color: azure;
     font-size: 153px;
     text-align: center;
+    margin-top: 150px;
 }
 .navobject{
     /* vertical-align: baseline; */
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.navOnScroll{
+    background: #0000009a;
+    backdrop-filter: blur(7px);
+    z-index: 100;
 }
 
 .navobject a{
@@ -140,47 +150,28 @@ h1{
 #feature{
     background-color: rgb(210, 18, 66);
     color:white;
-    height: 739px;
+    min-height: 739px;
     margin: 0;
 }
 
 .icons{
     width: 35px;
+    margin: 50px;
 }
 
 .ftext{
     width: 264px;
+    margin: 20px;
 }
 
 .feature{
     position: relative;
-    top: 200px;
-    left: 12.5%;
+    top: 100px;
     text-align: center;    
     display: flex;
-    flex-direction: column;
     align-content: center;
-    justify-content: center;
-    width: 75%;
-    
-}
-
-#icons{
-    display: flex;
     justify-content: space-around;
-    margin: 16px;
-}
-
-#title{
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
-}
-
-#text{
-    display: flex;
-    justify-content: space-around;
-    margin: 16px;
+    flex-wrap: wrap;
 }
 
 .ftittle{
@@ -210,7 +201,14 @@ h2{
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 6%;
+    top: 50px;
+}
+
+.cardfeature{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 #news{
@@ -220,7 +218,7 @@ h2{
 
 .news{
     max-width:auto;
-    max-width: 50%;
+    width: 50%;
     height: auto;
 }
 
@@ -328,8 +326,8 @@ h2{
     color: white;
     display: flex;
     align-items: center ;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .logofooter{
@@ -340,11 +338,15 @@ h2{
 .footer1{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 45%;
 }
 
 .footer2{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 45%;
 }
 
 .textfooter{
@@ -364,9 +366,33 @@ h2{
     color:white;
     padding-left: 5%;
     padding-right: 5%;
+    font-family: 'Roboto', sans-serif;
 }
 .nav-active{
     transform: translate(0%);
+}
+@media screen and (max-width:1638px){
+    .feature{
+        min-height: 650px;
+        top: 50px;
+        width: 80%;
+        left:10%
+    }
+    .icons{
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width:1240px){
+    .footerred{
+        flex-direction: column;
+    }
+    .footer1{
+        width: 70%;
+    }
+    .footer2{
+        width: 70%;
+    }
 }
 
 @media screen and (max-width:1210px){
@@ -398,18 +424,55 @@ h2{
 
 @media screen and (max-width:878px){
     .news{
-       display: none;
+       /* display: none; */
+       max-width: 100%;
+       width: 100%;
     }
     .news1{
-        background-image: url("../img/news.png");
+        /* background-image: url("../img/news.png"); */
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .news2{
-        background-image: url("../img/new2.png");
-        color: white;
+        /* background-image: url("../img/new2.png"); */
+        /* color: white; */
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
     .tnew , .titlenews{
-        background-color: rgba(0, 0, 0, 0.7);
+        /* background-color: rgba(0, 0, 0, 0.7); */
+    }
+    #news{
+        display: flex;
+        flex-direction: column;
+    }
+    .news1{order: 1;}
+    .news{order: 2;}
+    .news2{order: 3;}
+    .imgnews2{order: 4;}
+    .greyblock{
+        width: 75%;
+        /* margin-left: 235px; */
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    .whiteblock{
+        width: 75%;
+        /* margin-left: 235px; */
+        margin-bottom: 44px;
+    }
+}
+@media screen and (max-width:827px){
+    .feature{
+        min-height: 1100px;
+        top: 30px;
     }
 }
 
@@ -455,8 +518,8 @@ h2{
     }
     .menuprincipal li{
         /* opacity: 0; */
-        padding-bottom: 5px;
-        padding-top: 72px;
+        padding-bottom: 3px;
+        padding-top: 53px;
     }
 
     .burger{
@@ -466,7 +529,16 @@ h2{
         cursor: pointer;
     }
 }
-
+@media screen and (max-width:740px){
+    .footer1{
+        margin: 15px;
+        width: 90%;
+    }
+    .footer2{
+        margin: 15px;
+        width: 90%;
+    }
+}
 
 .nav-active{
     transform: translate(0%);
@@ -491,6 +563,15 @@ h2{
         padding-left: 11px;
         font-family: myriad;
     }
+
+    .footgrey{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .textfootgrey{
+        padding: 10px;
+    }
+    
 }
 @media screen and (max-width:519px){
     .news1{
@@ -523,7 +604,8 @@ h2{
     }
     .navobject{
         position: absolute;
-        top: 342px; right: 111px;
+        padding-left: 0px;
+        top: 500px; right: 111px;
         cursor: pointer;
     }
     .navobject a{
@@ -535,6 +617,28 @@ h2{
         font-size: 17px;
     }
 
+    #news{
+        /* display: block; */
+    }
+    .news1{
+        width: 100%;
+    }
+    .news2{
+        width: 100%;
+        
+    }
+
+    .greyblock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .whiteblock{
+        display: flex;
+        flex-direction: column;
+        /* margin-left: 138px; */
+    }
     
 }
 
@@ -553,6 +657,16 @@ h2{
     }
     .logoblog h2{
         padding-left: 146px;
-        
+    }  
+
+}
+
+@media screen and (max-height:725px){
+    .hero{
+        height: 615px;
     }
 }
+
+
+
+

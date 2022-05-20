@@ -11,38 +11,37 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/img/logo.png" alt="logo">
-            </div>
-            <ul class="menuprincipal">
-                <li><a class="active" href="#">Home</a> </li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Extensions</a></li>
-                <li><a href="#">Tutorials</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <div class="navobject">
-                <a href="#"><img onmouseover="fbk1()" onmouseout="fbk2()" id="fbk" src="assets/img/facebook.png" alt="facebook"></a>
-                <a href="#"><img onmouseover="twit1()" onmouseout="twit2()" id="twit" src="assets/img/twitter.png" alt="twitter"></a>
-                <a href="#"><img onmouseover="sky1()" onmouseout="sky2()" id="sky" src="assets/img/skype.png" alt="skype-logo"></a>
-                <a href="#"><img onmouseover="lin1()" onmouseout="lin2()" id="lin" src="assets/img/linkdin.png" alt="linkdin-logo"></a>
-                
-                
-                
-                
-            </div>
-        </nav>
-        
-        <hr class="sticky-hr">
+    <nav class="navbar" id="navi">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="logo">
+        </div>
+        <ul class="menuprincipal">
+            <li><a class="active" href="#">Home</a> </li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Extensions</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="navobject">
+            <a href="#"><img onmouseover="fbk1()" onmouseout="fbk2()" id="fbk" src="assets/img/facebook.png" alt="facebook"></a>
+            <a href="#"><img onmouseover="twit1()" onmouseout="twit2()" id="twit" src="assets/img/twitter.png" alt="twitter"></a>
+            <a href="#"><img onmouseover="sky1()" onmouseout="sky2()" id="sky" src="assets/img/skype.png" alt="skype-logo"></a>
+            <a href="#"><img onmouseover="lin1()" onmouseout="lin2()" id="lin" src="assets/img/linkdin.png" alt="linkdin-logo"></a>
+            
+            
+            
+            
+        </div>
+    </nav>
 
+    <div class="header">
+        
         <div class="hero">
             <h1>CREATIVES</h1>
             <div class="sub-hero">
@@ -56,31 +55,33 @@
         </div>
     </div>
 
-
     <div id="feature">
         <div class="slogan">
             <h2>WE ARE AN AWESOME AGENCY</h2>
         </div>
         <div class="feature">
-            <div id="icons">
-                <!-- 34x35 px -->
+            <div class="cardfeature">
                 <img class="icons" src="assets/img/feature.png" alt="featureicon">
-                <img class="icons" src="assets/img/feature.png" alt="featureicon">
-                <img class="icons" src="assets/img/search.png" alt="searchicon">
-                <img class="icons" src="assets/img/message.png" alt="messageicon">
-            </div>
-            <div id="title">
                 <h3 class="ftitle">FEATURE ONE</h3>
-                <h3 class="ftitle">FEATURE TWO</h3>
-                <h3 class="ftitle">FEATURE THREE</h3>
-                <h3 class="ftitle">FEATURE FOUR</h3>
+                <p class="ftext">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.</p>
             </div>
-            <div id="text">
-                <!-- 264 px de large -->
+            <div class="cardfeature">
+                <img class="icons" src="assets/img/feature.png" alt="featureicon">
+                <h3 class="ftitle">FEATURE TWO</h3>
                 <p class="ftext">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.</p>
+
+            </div>
+            <div class="cardfeature">
+                <img class="icons" src="assets/img/search.png" alt="searchicon">
+                <h3 class="ftitle">FEATURE THREE</h3>
                 <p class="ftext">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.</p>
+
+            </div>
+            <div class="cardfeature">
+                <img class="icons" src="assets/img/message.png" alt="messageicon">
+                <h3 class="ftitle">FEATURE FOUR</h3>
                 <p class="ftext">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.</p>
-                <p class="ftext">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.</p>
+
             </div>
         </div>
     </div>
@@ -94,7 +95,7 @@
             </div>
         </div>
         <img class="news" src="assets/img/news.png" alt="imgnews1">
-        <img src="assets/img/new2.png" alt="imgnews2" class="news">
+        <img src="assets/img/new2.png" alt="imgnews2" class="news imgnews2">
         <div class="news2">
             <div class="whiteblock">
                 <p class="date">Oct 12, 2020   |   In Culture</p>
@@ -102,8 +103,9 @@
                 <p class="tnew">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
                 <p class="tnew">Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur </p>
             </div>
+        </div>
     </div>
-    <div id="blogs">
+    <!-- <div id="blogs">
         <div class="logoblog">
             <h2>LET'S BLOG</h2>
         </div>
@@ -129,7 +131,7 @@
                 <h3 class="btitle">FRESH SUMMER CAMPAIGN</h3>
                 <p class="btext">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
             </div>   
-        </div>
+        </div> -->
         <div id="footer">
             <div class="footerred">
                 <div class="footer1">
