@@ -91,18 +91,45 @@ h1{
 
 .scrollbutton{
     background-color: transparent;
-  border: 1px solid rgba(252, 252, 252, 0.993);
-  color: white;
-  padding: 20px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+    border: 1px solid rgba(252, 252, 252, 0.993);
+    color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    /* width: 60px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     border-radius: 50%;
     cursor: pointer;
+    animation: colorOut .5s;
+    
 }
+.scrollbutton:hover {
+    animation: colorIn 0.4s forwards;
+}
+#sb:hover + #tscroll{
+    animation: textOut 0.4s forwards;
+}
+@keyframes colorIn {
+    0% { background-color: rgba(210, 18, 66, 0); }
+    50% { background-color: rgba(210, 18, 66, 0.5); }
+    75% { background-color: rgba(210, 18, 66, 0.7); }
+    100% { background-color: rgba(210, 18, 66, 1);}
+}
+@keyframes colorOut {
+    100% { background-color: rgba(210, 18, 66, 0); }
+    75% { background-color: rgba(210, 18, 66, 0.5); }
+    50% { background-color: rgba(210, 18, 66, 0.7); }
+    0% { background-color: rgba(210, 18, 66, 1); }
+}
+@keyframes textOut {
+    0% { top: -5px; }
+    50% { top: -10px; }
+    75% { top: -15px; color:rgba(255, 255, 255, 0.5) ; }
+    100% { color: rgba(255, 255, 255, 0);}
+}
+
 .hero{
     height: 770px;
     display: flex;
@@ -113,6 +140,8 @@ h1{
 
 .text-scroll{
     color: white;
+    position: relative;
+    top: 0px;
 }
 
 .sub-hero {
@@ -277,7 +306,7 @@ h2{
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 6%;
+    margin-top: 80px;
     margin-bottom: 120px;
 }
 
@@ -446,9 +475,7 @@ h2{
         align-items: center;
 
     }
-    .tnew , .titlenews{
-        /* background-color: rgba(0, 0, 0, 0.7); */
-    }
+
     #news{
         display: flex;
         flex-direction: column;
@@ -547,7 +574,7 @@ h2{
 @media screen and (max-width:712px){
    .logoblog{
        top: 10px;
-       margin-bottom: 0px;
+       margin-bottom: 5px;
    }
 }
 
@@ -617,9 +644,6 @@ h2{
         font-size: 17px;
     }
 
-    #news{
-        /* display: block; */
-    }
     .news1{
         width: 100%;
     }
@@ -639,6 +663,13 @@ h2{
         flex-direction: column;
         /* margin-left: 138px; */
     }
+
+    .card{
+        margin-left: 0px;
+    }
+    .blogs{
+        justify-content: center;
+    }
     
 }
 
@@ -652,11 +683,11 @@ h2{
     
     .logoblog{
         background-position: 38% 50%;
-        justify-content: left;
+        /* justify-content: left; */
 
     }
     .logoblog h2{
-        padding-left: 146px;
+        /* padding-left: 146px; */
     }  
 
 }
@@ -666,7 +697,3 @@ h2{
         height: 615px;
     }
 }
-
-
-
-
