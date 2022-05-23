@@ -21,15 +21,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 html {
 	scroll-behavior: smooth;
 }
 
-
 .header {
     background-image: url('../img/header-bground-img.png');
-    /* background-color: rgb(3, 15, 15); */
     margin-top: -110px;
     height: 929px;
 }
@@ -45,29 +42,22 @@ html {
     font-family: 'myriad';
 }
 
-
-
 nav{
     display: flex;
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    /* padding-left: 30px;
-    padding-right: 30px; */
-    
-    
 }
 .menuprincipal{
     display: flex;
     justify-content: space-around;
     font-family: 'myriad';
-    
+    font-size: 20px;
 }
 .menuprincipal li{
     list-style: none;
     padding-right: 20px;
 }
-
 
 a{
     text-decoration: none;
@@ -83,7 +73,6 @@ h1{
     margin-top: 150px;
 }
 .navobject{
-    /* vertical-align: baseline; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -101,23 +90,47 @@ h1{
 
 .menuprincipal a:hover{
     border-bottom: 3px solid rgb(210, 18, 66);
-    /* outline: 3px solid black; */
 }
 
 .scrollbutton{
     background-color: transparent;
-  border: 1px solid rgba(252, 252, 252, 0.993);
-  color: white;
-  padding: 20px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+    border: 1px solid rgba(252, 252, 252, 0.993);
+    color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     border-radius: 50%;
     cursor: pointer;
+    animation: colorOut .5s;
 }
+.scrollbutton:hover {
+    animation: colorIn 0.4s forwards;
+}
+#sb:hover + #tscroll{
+    animation: textOut 0.4s forwards;
+}
+@keyframes colorIn {
+    0% { background-color: rgba(210, 18, 66, 0); }
+    50% { background-color: rgba(210, 18, 66, 0.5); }
+    75% { background-color: rgba(210, 18, 66, 0.7); }
+    100% { background-color: rgba(210, 18, 66, 1);}
+}
+@keyframes colorOut {
+    100% { background-color: rgba(210, 18, 66, 0); }
+    75% { background-color: rgba(210, 18, 66, 0.5); }
+    50% { background-color: rgba(210, 18, 66, 0.7); }
+    0% { background-color: rgba(210, 18, 66, 1); }
+}
+@keyframes textOut {
+    0% { top: -5px; }
+    50% { top: -10px; }
+    75% { top: -15px; color:rgba(255, 255, 255, 0.5) ; }
+    100% { color: rgba(255, 255, 255, 0);}
+}
+
 .hero{
     height: 770px;
     display: flex;
@@ -128,6 +141,8 @@ h1{
 
 .text-scroll{
     color: white;
+    position: relative;
+    top: 0px;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
 }
@@ -207,11 +222,13 @@ h1{
 }
 
 h2{
+    font-family: "Gotham";
     font-size: 38px;
     text-align: center;
 }
 
 .slogan{
+    
     background-image: url('../img/W.png');
     background-repeat: no-repeat;
     height: 210px;
@@ -294,11 +311,12 @@ h2{
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 6%;
+    margin-top: 80px;
     margin-bottom: 120px;
 }
 
 .sloganblog{
+    font-family: "GothamBook";
     text-align: center;
     font-size: 30px;
     margin-bottom: 60px;
@@ -313,12 +331,14 @@ h2{
 }
 
 .btitle{
+    font-family: "Gotham";
     color:rgb(210, 18, 66);
     margin-top: 40px;
     font-size: 18px;
 }
 
 .btext{
+    font-family: "GothamBook";
     font-size: 15px;
     line-height: 20px;
     margin-top: 22px;
@@ -328,7 +348,7 @@ h2{
 .blogs{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around;s */
+    justify-content:center;
     max-width: 100%;
 }
 
@@ -440,27 +460,26 @@ h2{
 }
 
 @media screen and (max-width:878px){
+    .menuprincipal{
+        font-size: 15px;
+    }
     .news{
-       /* display: none; */
-       max-width: 100%;
-       width: 100%;
+        max-width: 100%;
+        width: 100%;
     }
     .news1{
-        /* background-image: url("../img/news.png"); */
         width: 100%;
-        
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .news2{
-        /* background-image: url("../img/new2.png"); */
-        /* color: white; */
         width: auto;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
 
     }
     #news{
@@ -482,7 +501,6 @@ h2{
         /* margin-left: 235px; */
         margin-bottom: 44px;
     }
-}
 @media screen and (max-width:827px){
     .feature{
         min-height: 1100px;
@@ -559,10 +577,10 @@ h2{
 }
 
 @media screen and (max-width:712px){
-   .logoblog{
-       top: 10px;
-       margin-bottom: 0px;
-   }
+    .logoblog{
+        top: 10px;
+        margin-bottom: 5px;
+    }
 }
 
 
@@ -613,7 +631,6 @@ h2{
 
 @media screen and (max-width:500px){
     .hero h1{
-        
         font-size: 60px; 
     }
     .navobject{
@@ -635,7 +652,6 @@ h2{
     }
     .news2{
         width: 100%;
-        
     }
 
     .greyblock{
@@ -649,7 +665,13 @@ h2{
         flex-direction: column;
         /* margin-left: 138px; */
     }
-    
+
+    .card{
+        margin-left: 0px;
+    }
+    .blogs{
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width:428px){
@@ -662,13 +684,7 @@ h2{
     
     .logoblog{
         background-position: 38% 50%;
-        justify-content: left;
-
     }
-    .logoblog h2{
-        padding-left: 146px;
-    }  
-
 }
 @media screen and (max-height:725px){
     .hero{
