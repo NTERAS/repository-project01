@@ -5,19 +5,28 @@
 }
 
 @font-face {
-    font-family: myriad;
-    src: url('../fonts/MYRIADPRO-REGULAR.OTF');
+    font-family: "myriad";
+    src: url('/assets/fonts/MYRIADPRO-REGULAR.OTF') format("opentype");  
 }
+
+@font-face {
+    font-family: "Gotham";
+    src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "GothamBook";
+    src: url("/assets/fonts/GothamBook.ttf") format("truetype");
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
 	scroll-behavior: smooth;
 }
 
-
 .header {
     background-image: url('../img/header-bground-img.png');
-    /* background-color: rgb(3, 15, 15); */
     margin-top: -110px;
     height: 929px;
 }
@@ -30,31 +39,25 @@ html {
     position: sticky;
     top: 0px;
     border-bottom: solid 1px;
+    font-family: 'myriad';
 }
-
-
 
 nav{
     display: flex;
     list-style: none;
     justify-content: space-around;
     align-items: center;
-    /* padding-left: 30px;
-    padding-right: 30px; */
-    
-    
 }
 .menuprincipal{
     display: flex;
     justify-content: space-around;
-    font-family: myriad;
-    
+    font-family: 'myriad';
+    font-size: 20px;
 }
 .menuprincipal li{
     list-style: none;
     padding-right: 20px;
 }
-
 
 a{
     text-decoration: none;
@@ -64,11 +67,12 @@ a{
 h1{
     color: azure;
     font-size: 153px;
+    font-weight: 600;
     text-align: center;
+    font-family: 'Gotham';
     margin-top: 150px;
 }
 .navobject{
-    /* vertical-align: baseline; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -86,7 +90,6 @@ h1{
 
 .menuprincipal a:hover{
     border-bottom: 3px solid rgb(210, 18, 66);
-    /* outline: 3px solid black; */
 }
 
 .scrollbutton{
@@ -94,7 +97,6 @@ h1{
     border: 1px solid rgba(252, 252, 252, 0.993);
     color: rgba(255, 255, 255, 0);
     padding: 20px;
-    /* width: 60px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -103,7 +105,6 @@ h1{
     border-radius: 50%;
     cursor: pointer;
     animation: colorOut .5s;
-    
 }
 .scrollbutton:hover {
     animation: colorIn 0.4s forwards;
@@ -142,6 +143,8 @@ h1{
     color: white;
     position: relative;
     top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 }
 
 .sub-hero {
@@ -181,6 +184,7 @@ h1{
     color:white;
     min-height: 739px;
     margin: 0;
+    font-family: 'Gotham';
 }
 
 .icons{
@@ -191,6 +195,7 @@ h1{
 .ftext{
     width: 264px;
     margin: 20px;
+    font-family: 'GothamBook';
 }
 
 .feature{
@@ -217,11 +222,13 @@ h1{
 }
 
 h2{
+    font-family: "Gotham";
     font-size: 38px;
     text-align: center;
 }
 
 .slogan{
+    
     background-image: url('../img/W.png');
     background-repeat: no-repeat;
     height: 210px;
@@ -265,17 +272,20 @@ h2{
 .titlenews{
     font-size: 25px;
     margin-bottom: 10px;
+    font-family: 'Gotham';
 }
 
 .date{
     font-size: 13px;
     margin-bottom: 10px;
+    font-family: 'GothamBook';
 
 }
 
 .tnew{
     font-size: 15px;
     margin-top: 35px;
+    font-family: 'GothamBook';
 }
 
 .greyblock{
@@ -292,11 +302,6 @@ h2{
     margin-left: 10%;
 }
 
-@font-face {
-    font-family: "Gotham";
-    src: url("/assets/font/Gotham\ Medium.otf") format("opentype");
-}
-
 .logoblog{
     height: 176px;
     background-image: url('../img/B.png');
@@ -311,6 +316,7 @@ h2{
 }
 
 .sloganblog{
+    font-family: "GothamBook";
     text-align: center;
     font-size: 30px;
     margin-bottom: 60px;
@@ -325,12 +331,14 @@ h2{
 }
 
 .btitle{
+    font-family: "Gotham";
     color:rgb(210, 18, 66);
     margin-top: 40px;
     font-size: 18px;
 }
 
 .btext{
+    font-family: "GothamBook";
     font-size: 15px;
     line-height: 20px;
     margin-top: 22px;
@@ -340,7 +348,7 @@ h2{
 .blogs{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around;s */
+    justify-content:center;
     max-width: 100%;
 }
 
@@ -381,6 +389,7 @@ h2{
 .textfooter{
     width: 50vh;
     margin-left: 20px;
+    font-family: 'GothamBook';
 }
 
 .footgrey{
@@ -452,28 +461,25 @@ h2{
 }
 
 @media screen and (max-width:878px){
+    .menuprincipal{
+        font-size: 15px;
+    }
     .news{
-       /* display: none; */
-       max-width: 100%;
-       width: 100%;
+        max-width: 100%;
+        width: 100%;
     }
     .news1{
-        /* background-image: url("../img/news.png"); */
         width: 100%;
-        
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .news2{
-        /* background-image: url("../img/new2.png"); */
-        /* color: white; */
         width: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     #news{
@@ -572,10 +578,10 @@ h2{
 }
 
 @media screen and (max-width:712px){
-   .logoblog{
-       top: 10px;
-       margin-bottom: 5px;
-   }
+    .logoblog{
+        top: 10px;
+        margin-bottom: 5px;
+    }
 }
 
 
@@ -626,7 +632,6 @@ h2{
 
 @media screen and (max-width:500px){
     .hero h1{
-        
         font-size: 60px; 
     }
     .navobject{
@@ -649,7 +654,6 @@ h2{
     }
     .news2{
         width: 100%;
-        
     }
 
     .greyblock{
@@ -670,7 +674,6 @@ h2{
     .blogs{
         justify-content: center;
     }
-    
 }
 
 @media screen and (max-width:428px){
@@ -683,13 +686,7 @@ h2{
     
     .logoblog{
         background-position: 38% 50%;
-        /* justify-content: left; */
-
     }
-    .logoblog h2{
-        /* padding-left: 146px; */
-    }  
-
 }
 
 @media screen and (max-height:725px){
