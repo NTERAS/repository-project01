@@ -14,13 +14,24 @@
     src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "GothamBook";
+    src: url("/assets/fonts/GothamBook.ttf") format("truetype");
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+html {
+	scroll-behavior: smooth;
+}
+
 
 .header {
     background-image: url('../img/header-bground-img.png');
     /* background-color: rgb(3, 15, 15); */
+    margin-top: -110px;
+    height: 929px;
 }
 
 .navbar{
@@ -33,6 +44,8 @@
     border-bottom: solid 1px;
     font-family: 'myriad';
 }
+
+
 
 nav{
     display: flex;
@@ -54,10 +67,7 @@ nav{
     list-style: none;
     padding-right: 20px;
 }
-.menuprincipal a:hover{
-    border-bottom: 3px solid rgb(210, 18, 66);
-    /* outline: 3px solid black; */
-}
+
 
 a{
     text-decoration: none;
@@ -70,6 +80,7 @@ h1{
     font-weight: 600;
     text-align: center;
     font-family: 'Gotham';
+    margin-top: 150px;
 }
 .navobject{
     /* vertical-align: baseline; */
@@ -77,12 +88,21 @@ h1{
     justify-content: space-around;
     align-items: center;
 }
+.navOnScroll{
+    background: #0000009a;
+    backdrop-filter: blur(7px);
+    z-index: 100;
+}
 
 .navobject a{
     padding-left: 25px;
     font-family: myriad;
 }
 
+.menuprincipal a:hover{
+    border-bottom: 3px solid rgb(210, 18, 66);
+    /* outline: 3px solid black; */
+}
 
 .scrollbutton{
     background-color: transparent;
@@ -160,18 +180,17 @@ h1{
 .ftext{
     width: 264px;
     margin: 20px;
+    font-family: 'GothamBook';
 }
 
 .feature{
     position: relative;
-    top: 200px;
-    left: 12.5%;
+    top: 100px;
     text-align: center;    
     display: flex;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 75%;
 }
 
 .ftittle{
@@ -236,17 +255,20 @@ h2{
 .titlenews{
     font-size: 25px;
     margin-bottom: 10px;
+    font-family: 'Gotham';
 }
 
 .date{
     font-size: 13px;
     margin-bottom: 10px;
+    font-family: 'GothamBook';
 
 }
 
 .tnew{
     font-size: 15px;
     margin-top: 35px;
+    font-family: 'GothamBook';
 }
 
 .greyblock{
@@ -283,6 +305,7 @@ h2{
 }
 
 .card{
+    width: 300px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -304,10 +327,9 @@ h2{
 
 .blogs{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    /* justify-content: space-around;s */
     max-width: 100%;
-    margin-left: 15%;
-    margin-right: 15%;
 }
 
 .imgblog{
@@ -345,8 +367,9 @@ h2{
 }
 
 .textfooter{
-    width: 70vh;
+    width: 50vh;
     margin-left: 20px;
+    font-family: 'GothamBook';
 }
 
 .footgrey{
@@ -363,7 +386,47 @@ h2{
     padding-right: 5%;
     font-family: 'Roboto', sans-serif;
 }
+.nav-active{
+    transform: translate(0%);
+}
+@media screen and (max-width:1638px){
+    .feature{
+        min-height: 650px;
+        top: 50px;
+        width: 80%;
+        left:10%
+    }
+    .icons{
+        margin: 20px;
+    }
+}
 
+@media screen and (max-width:1240px){
+    .footerred{
+        flex-direction: column;
+    }
+    .footer1{
+        width: 70%;
+    }
+    .footer2{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:1210px){
+    .greyblock{
+        width: 50%;
+        height: 50%;
+        margin-top: 5%;
+        margin-left: 30%;
+    }
+    .whiteblock{
+        width: 50%;
+        height: 50%;
+        margin-top: 5%;
+        margin-left: 10%;
+    }
+}
 
 @media screen and (max-width:912px){
     .hero h1{
@@ -371,25 +434,112 @@ h2{
         font-size: 100px;
         text-align: center;
     }
+    .tnew {
+        font-size: 15px;
+        margin-top: 7px;
+    }
+}
+
+@media screen and (max-width:878px){
+    .news{
+       /* display: none; */
+       max-width: 100%;
+       width: 100%;
+    }
+    .news1{
+        /* background-image: url("../img/news.png"); */
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news2{
+        /* background-image: url("../img/new2.png"); */
+        /* color: white; */
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .tnew , .titlenews{
+        /* background-color: rgba(0, 0, 0, 0.7); */
+    }
+    #news{
+        display: flex;
+        flex-direction: column;
+    }
+    .news1{order: 1;}
+    .news{order: 2;}
+    .news2{order: 3;}
+    .imgnews2{order: 4;}
+    .greyblock{
+        width: 75%;
+        /* margin-left: 235px; */
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    .whiteblock{
+        width: 75%;
+        /* margin-left: 235px; */
+        margin-bottom: 44px;
+    }
+}
+@media screen and (max-width:827px){
+    .feature{
+        min-height: 1100px;
+        top: 30px;
+    }
 }
 
 @media screen and (max-width:760px){
     body{
         overflow-x: hidden;
     }
+
+    .navbar{
+        justify-content: space-between;
+    }
+    .logo{
+        padding-left: 16px;
+    }
     .menuprincipal {
         position: absolute;
         left: 0px;
-        height: 100vh;
+        height: 840px;
         top: 0vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 60%;
         transform: translate(-100%);
         transition: transform 0.5s ease-in;
         background-color: rgb(0, 0, 0);
+        justify-content:flex-start;
+    
     }
+    .navobject {
+        position: absolute;
+        padding-left: 75px;
+        left: 0px;
+        height: 28px;
+        top: 618px;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        transform: translate(-100%);
+        transition: transform 0.5s ease-in;
+        justify-content:flex-start;
+    
+    }
+    .menuprincipal li{
+        /* opacity: 0; */
+        padding-bottom: 3px;
+        padding-top: 53px;
+    }
+
     .burger{
         display: block;
         position: absolute;
@@ -397,10 +547,29 @@ h2{
         cursor: pointer;
     }
 }
+@media screen and (max-width:740px){
+    .footer1{
+        margin: 15px;
+        width: 90%;
+    }
+    .footer2{
+        margin: 15px;
+        width: 90%;
+    }
+}
 
 .nav-active{
     transform: translate(0%);
 }
+
+@media screen and (max-width:712px){
+   .logoblog{
+       top: 10px;
+       margin-bottom: 0px;
+   }
+}
+
+
 
 @media screen and (max-width:590px){
     .hero h1{
@@ -420,7 +589,32 @@ h2{
     .textfootgrey{
         padding: 10px;
     }
+    
 }
+@media screen and (max-width:519px){
+    .news1{
+        background-image:none;
+    }
+
+    .news2{
+        background-image:none;
+        color: black;
+    }
+    .tnew , .titlenews{
+        background-color:rgba(0, 0, 0, 0);
+    }
+    .sloganblog {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .blogs{
+        padding-top: 20px;
+    }
+
+}
+
 @media screen and (max-width:500px){
     .hero h1{
         
@@ -428,53 +622,69 @@ h2{
     }
     .navobject{
         position: absolute;
-        top: 342px; right: 111px;
+        padding-left: 0px;
+        top: 500px; right: 111px;
         cursor: pointer;
     }
     .navobject a{
         padding-left: 34px;
     }
+    .sloganblog {
+        text-align: left;
+        padding-left: 28px;
+        font-size: 17px;
+    }
+
+    #news{
+        /* display: block; */
+    }
+    .news1{
+        width: 100%;
+    }
+    .news2{
+        width: 100%;
+        
+    }
+
+    .greyblock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .whiteblock{
+        display: flex;
+        flex-direction: column;
+        /* margin-left: 138px; */
+    }
     
 }
 
-@media screen and (max-width:1638px){
-    .feature{
-        min-height: 650px;
-        top: 50px;
-        width: 80%;
-        left:10%
+@media screen and (max-width:428px){
+    .sloganblog {
+        text-align: left;
+        padding-left: 5px;
+        padding-top: 5px;
+        font-size: 17px;
     }
-    .icons{
-        margin: 20px;
+    
+    .logoblog{
+        background-position: 38% 50%;
+        justify-content: left;
+
+    }
+    .logoblog h2{
+        padding-left: 146px;
+    }  
+
+}
+
+@media screen and (max-height:725px){
+    .hero{
+        height: 615px;
     }
 }
 
-@media screen and (max-width:827px){
-    .feature{
-        min-height: 1100px;
-        top: 30px;
-    }
-}
 
-@media screen and (max-width:1240px){
-    .footerred{
-        flex-direction: column;
-    }
-    .footer1{
-        width: 70%;
-    }
-    .footer2{
-        width: 70%;
-    }
-}
 
-@media screen and (max-width:740px){
-    .footer1{
-        margin: 15px;
-        width: 90%;
-    }
-    .footer2{
-        margin: 15px;
-        width: 90%;
-    }
-}
+
