@@ -107,9 +107,8 @@ h1{
 }
 @keyframes typing {
     from {
-      width: 0
-    }
-  }   
+        width: 0
+    } 
 }
 .navobject{
     display: flex;
@@ -126,10 +125,6 @@ h1{
     padding-left: 25px;
     font-family: myriad;
 }
-
-/* .menuprincipal a:hover{
-    border-bottom: 3px solid rgb(210, 18, 66);
-} */
 
 .scrollbutton{
     background-color: transparent;
@@ -215,7 +210,6 @@ h1{
     transform: rotate(45deg) translate(-5px,-9px);
 }
 
-
 /* Léo */
 
 #feature{
@@ -246,7 +240,6 @@ h1{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 
 .ftittle{
     width: 264px;
@@ -289,39 +282,40 @@ height: 40px;
 .shiny-slogan::after{
     animation: shine 5s ease-in-out  infinite;
     animation-fill-mode: forwards;  
-content: "";
-position: absolute;
-top: -110%;
-left: -210%;
-width: 400%;
-height: 200%;
-opacity: 0;
-transform: rotate(30deg);
-background: rgba(255, 255, 255, 0.13);
-background: linear-gradient(
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 400%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
     to right, 
     rgba(255, 255, 255, 0.13) 0%,
     rgba(255, 255, 255, 0.13) 77%,
     rgba(255, 255, 255, 0.5) 92%,
     rgba(255, 255, 255, 0.0) 100%
-  );
+);
 }
+
 @keyframes shine{
     10% {
-      opacity: 1;
-      top: -30%;
-      left: -30%;
-      transition-property: left, top, opacity;
-      transition-duration: 0.7s, 0.7s, 0.15s;
-      transition-timing-function: ease;
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
     }
     100% {
-      opacity: 0;
-      top: -30%;
-      left: -30%;
-      transition-property: left, top, opacity;
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
     }
-  }
+}
 
 .cardfeature{
     display: flex;
@@ -562,7 +556,6 @@ background: linear-gradient(
         justify-content: center;
         align-items: center;
     }
-
     .news2{
         width: auto;
         display: flex;
@@ -570,7 +563,6 @@ background: linear-gradient(
         align-items: center;
     }
 
-    }
     #news{
         display: flex;
         flex-direction: column;
@@ -579,6 +571,7 @@ background: linear-gradient(
     .news{order: 2;}
     .news2{order: 3;}
     .imgnews2{order: 4;}
+
     .greyblock{
         width: 75%;
         /* margin-left: 235px; */
@@ -590,6 +583,7 @@ background: linear-gradient(
         /* margin-left: 235px; */
         margin-bottom: 44px;
     }
+}
 @media screen and (max-width:827px){
     .feature{
         min-height: 1100px;
